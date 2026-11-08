@@ -4,14 +4,14 @@
     // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        
+
         {
             "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
             "projectName": "MiniProjet_Java_24fe525e",
-            "args": "7 5 6 9 8 5 5 3 3 8 5 6"
+            "args": "7 7 6 9 8 7 5 3 3 8 5 6"
         }
     ]
 }

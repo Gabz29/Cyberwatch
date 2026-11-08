@@ -1,7 +1,10 @@
 public class Main {
     public static void main(String[] args) {
+        // Titre du projet
         System.out.println("=== CYBERWATCH ===");
+        // Taille de la liste
         System.out.println("Evènements analysés : " + args.length + "\n");
+        // Répartition des risques
         System.out.println("Répartitions des risques :");
         int[] values = stringToInteger(args);
         int[] param = paramValues(values);
@@ -22,6 +25,31 @@ public class Main {
             }
             System.out.println();
         }
+        // Risque min
+        System.out.println("Risque minimum : " + param[0]);
+        // Risque max
+        System.out.println("Risque minimum : " + param[1]);
+        // Risque la plus  fréquent
+        int valuesFrequence = nbApparition[0];
+        int index = 0;
+        for(int i = 0; i < nbApparition.length; i++){
+            if(valuesFrequence < nbApparition[i]){
+                valuesFrequence = nbApparition[i];
+                index = i;
+            }
+        }
+        int indexValues = index + param[0];
+        System.out.println("Risque le plus fréquent : " + indexValues);
+        // Fréquence d'apparition de ce risque
+        System.out.println("Fréquence de ce risque : " + nbApparition[index]);
+        // Nombre d'évènements critiques
+        int countCritical = 0;
+        for(int i = 0; i< values.length; i++){
+            if(values[i] >= 7){
+                countCritical ++;
+            }
+        }
+        System.out.println("Evènement critiques : " + countCritical);
     }
 
     // Méthode pour transformer une liste de String en Integer
