@@ -28,7 +28,7 @@ public class Main {
         // Risque min
         System.out.println("Risque minimum : " + param[0]);
         // Risque max
-        System.out.println("Risque minimum : " + param[1]);
+        System.out.println("Risque maximum : " + param[1]);
         // Risque la plus  fréquent
         int valuesFrequence = nbApparition[0];
         int index = 0;
