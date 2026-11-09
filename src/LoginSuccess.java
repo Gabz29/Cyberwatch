@@ -24,4 +24,9 @@ public class LoginSuccess extends SecurityEvent{
         }
         return score;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Identifiant de connexion : " + this.username + " | Hors plage horaire standard " + this.outsideWorkingHours + " | Nouvel appareil " + this.isNewDevice;
+    }
 }

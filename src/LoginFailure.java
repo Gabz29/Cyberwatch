@@ -21,4 +21,9 @@ public class LoginFailure extends SecurityEvent{
         }
         return score;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Échecs de connexion : " + this.nbFailure;
+    }
 }

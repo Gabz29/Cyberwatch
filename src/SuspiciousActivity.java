@@ -24,4 +24,9 @@ public class SuspiciousActivity extends SecurityEvent{
         }
         return score;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + " | Type d'activité : " + this.activityType + " | Niveau de gravité AntiVirus " + this.severityLevel + " | Taille des données transférées " + this.dataVolumeMo;
+    }
 }
