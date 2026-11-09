@@ -1,7 +1,9 @@
 public class Main {
     public static void main(String[] args) {
         /*
+        // =================================================
         // ======== Partie 1. Affichage des risques ========
+        // =================================================
         // Titre du projet
         System.out.println("=== CYBERWATCH ===");
         // Taille de la liste
@@ -54,7 +56,9 @@ public class Main {
         System.out.println("Evènement critiques : " + countCritical);
         */
        /*
+        // ===================================================
         // ======== PARTIE 2. Appelle à SecurityEvent ========
+        // ===================================================
         SecurityEvent[] event = new SecurityEvent[10];
         event[0] = new LoginFailure(3, 101, "192.168.1.1", "2026-11-09");
         event[1] = new LoginSuccess("admin", true, false, 102, "10.0.0.5", "2026-11-09");
@@ -65,7 +69,9 @@ public class Main {
             System.out.println("Analyse de l'évènement n°" + i + ", son score est : " + score[i]);
         }
         */
-        // ======== PARTIE 3. Gestion des évènements et statistiques
+        // ==================================================================
+        // ======== PARTIE 3. Gestion des évènements et statistiques ========
+        // ==================================================================
         SecurityManager manager = new SecurityManager(); 
         LoginFailure a = new LoginFailure(3, 101, "192.168.1.1", "2026-11-09");
         LoginFailure b = new LoginFailure(7, 102, "192.168.1.1", "2026-11-09");
@@ -77,7 +83,7 @@ public class Main {
         System.out.println("Analyse de l'évènement n°1, son score est : " + scoreA);
         System.out.println("Analyse de l'évènement n°2, son score est : " + scoreB);
     }
-
+/*
     // Méthode pour transformer une liste de String en Integer
     public static int[] stringToInteger(String[] args){
         int[] values = new int[args.length];
@@ -87,7 +93,7 @@ public class Main {
         return values;
     }
 
-    // Méthode pour récupérer le min et le max d'une lsite
+    // Méthode pour récupérer le min et le max d'une liste
     public static int[] paramValues(int[] values){
         int minValues = values[0];
         int maxValues = values[0];
@@ -107,4 +113,5 @@ public class Main {
 
         return param;
     }
+        */
 }

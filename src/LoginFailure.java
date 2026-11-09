@@ -5,6 +5,10 @@ public class LoginFailure extends SecurityEvent{
         this.nbFailure = nbFailure;
     }
 
+    public int getNbFailure(){
+        return this.nbFailure;
+    }
+
     @Override
     public int getRiskScore(){ // Score de 0 à 9
         System.out.println("-> Exécution du calcul dans LoginFailure");
