@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        // Titre du projet
+        // ======== Partie 1. Affichage des risques ========
+        /*// Titre du projet
         System.out.println("=== CYBERWATCH ===");
         // Taille de la liste
         System.out.println("Evènements analysés : " + args.length + "\n");
@@ -49,7 +50,18 @@ public class Main {
                 countCritical ++;
             }
         }
-        System.out.println("Evènement critiques : " + countCritical);
+        System.out.println("Evènement critiques : " + countCritical);*/
+
+        // ======== PARTIE 2. Appelle à SecurityEvent ========
+        SecurityEvent[] event = new SecurityEvent[10];
+        event[0] = new LoginFailure(3, 101, "192.168.1.1", "2026-11-09");
+        event[1] = new LoginSuccess("admin", true, false, 102, "10.0.0.5", "2026-11-09");
+        event[2] = new SuspiciousActivity("Téléchargements massif", 4, 60000, 103, "192.168.0.5", "2026-11-09");
+        int[] score = new int[3];
+        for(int i = 0; i < 3; i++){
+            score[i] = event[i].getRiskScore();
+            System.out.println("Analyse de l'évènement n°" + i + ", son score est : " + score[i]);
+        }
     }
 
     // Méthode pour transformer une liste de String en Integer

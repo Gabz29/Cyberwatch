@@ -7,6 +7,7 @@ public class LoginFailure extends SecurityEvent{
 
     @Override
     public int getRiskScore(){ // Score de 0 à 9
+        System.out.println("-> Exécution du calcul dans LoginFailure");
         int f = this.nbFailure;
         int score = 0;
         if(f > 2){

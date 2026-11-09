@@ -11,6 +11,7 @@ public class LoginSuccess extends SecurityEvent{
 
     @Override
     public int getRiskScore(){
+        System.out.println("-> Exécution du calcul dans LoginSuccess");
         int score = 0;
         if(this.username.equals("admin")){
             score = score + 7;

@@ -11,6 +11,7 @@ public class SuspiciousActivity extends SecurityEvent{
 
     @Override 
     public int getRiskScore(){
+        System.out.println("-> Exécution du calcul dans SuspiciousActivity");
         int score = 0;
         if(activityType.equals("Scan de ports") || activityType.equals("Téléchargements massif") || activityType.equals("Modification de mot de passe")){
             score = score + 7;
