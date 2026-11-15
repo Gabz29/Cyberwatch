@@ -8,6 +8,10 @@ public class SecurityManager {
         this.journal = new ArrayList<>();
     }
 
+    public List<SecurityEvent> getJournal(){
+        return this.journal;
+    }
+
     public void saveEvent(SecurityEvent event){
         journal.add(event);
     }

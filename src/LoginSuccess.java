@@ -9,6 +9,18 @@ public class LoginSuccess extends SecurityEvent{
         this.isNewDevice = isNewDevice;
     }
 
+    public String getUsername(){
+        return this.username;
+    }
+
+    public boolean getOutsideWorkingHours(){
+        return this.outsideWorkingHours;
+    }
+
+    public boolean getIsNewDevice(){
+        return isNewDevice;
+    }
+
     @Override
     public int getRiskScore(){
         System.out.println("-> Exécution du calcul dans LoginSuccess");

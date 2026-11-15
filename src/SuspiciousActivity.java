@@ -9,6 +9,18 @@ public class SuspiciousActivity extends SecurityEvent{
         this.dataVolumeMo = dataVolumeMo;
     }
 
+    public String getActivityType(){
+        return this.activityType;
+    }
+
+    public int getSeverityLevel(){
+        return this.severityLevel;
+    }
+
+    public int getDataVolumeMo(){
+        return this.dataVolumeMo;
+    }
+
     @Override 
     public int getRiskScore(){
         System.out.println("-> Exécution du calcul dans SuspiciousActivity");
